@@ -1,0 +1,21 @@
+= (load 'utils').extend({
+    maxIterations: _,'10'_
+});
+
+.fibonacciInternal = <
+    = parent.extend({ n: __, a: __, b: __ });
+
+    .b@(.log);
+
+    if .n.equals(0):
+        return .b;
+
+    return .fibonacciInternal(.n.minus(1), .b, .a.plus(.b));
+>;
+
+.fibonacci = <
+    = parent;
+    return .fibonacciInternal(__, 1, 1);
+>;
+
+.maxIterations.asNumber()@(.fibonacci);

@@ -1,0 +1,6 @@
+= load 'utils';
+.y = {};
+.y.foo = 'stuff';
+.log(.y);
+(load './while.meth').i@(.log);
+return 7;

@@ -1,0 +1,3 @@
+= load 'utils';
+
+__.add(' world')@(.log);

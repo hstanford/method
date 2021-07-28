@@ -1,0 +1,3 @@
+= load 'utils';
+
+3(2.add)(.log);

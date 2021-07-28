@@ -1,0 +1,48 @@
+// test comment
+= {
+    y: <
+        return __.add('!!!');
+    >,
+    z: 'Hello World',
+    m: <
+        = { j: __, k: _,3_ };
+        return .j.slice(0, .k);
+    >,
+    x: <
+        .w = returning { a: 3 };
+        .w.set('b', 4);
+    >
+}.extend(load 'utils');
+
+.z@(.y)@(.m, 12)@(.log);;
+// thing
+
+.array = |.z, 3, 4|;
+.array.concat(|1, 2, 3|)@(.log);
+
+.function = <
+    = parent;
+    returning 3;
+    _1,'worlds'_@(.log);
+    _0_@(.log);
+>;
+
+'hello'@(.function)@(.log);
+
+{a: 1}@(<
+    return __.extend({ b: 2 });
+>)@(.log);
+
+.a = {b: 4};
+.a.item = .a;
+.a.item.item.b@(.log);
+
+
+|5, 4, 3, 2, 1|[1]@(.log);
+
+{ a: 1, b: |1, 2, 3| }@(.log);
+
+|'a', 'b'|['foo']@(.log);
+
+['foo'] = 'Hello';
+['foo']@((load 'utils').log);

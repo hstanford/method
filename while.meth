@@ -1,0 +1,7 @@
+= load 'utils';
+.i = 10;
+
+while .i.gt(-5):
+    .i = .i.minus(1);
+.i@(.log);
+'Done'@(.log);
